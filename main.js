@@ -28,16 +28,8 @@ function checkYear(holidays) {
     }
 }
 
-function getDateDay(date) {
-    if (date.getDay() === 0) {
-        return 7;
-    }
-    return date.getDay();
-}
-
 function checkWeekend(date) {
-    //return (date.getDay() === 6 || date.getDay() === 0);
-    return (getDateDay(date) === 6 || getDateDay(date) === 7);
+    return (date.getDay() === 6 || date.getDay() === 0);
 }
 
 // Кол-во праздничных выходных в году, за исключением субботы и воскресенья
