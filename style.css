@@ -1,21 +1,23 @@
 body {
     font-family: Arial;
     font-size: 13px;
+    background: url('image/herringbone.png');
 }
-.container {
+#container {
     position: fixed;
-    top: 50%;
+    top: 19%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid green;
+    border: 3px solid red;
     padding: 20px;
     border-radius: 10px;
+    background-color: white;
 }
 #title {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 30px;
-    font-style: italic;
+    text-shadow: 0 0 3px black;
 }
 #title::after {
     font-weight: normal;
@@ -34,5 +36,34 @@ body {
 #answer {
     position: absolute;
     height: 20px;
-    width: 75px;
+    width: 175px;
+}
+#govHolidays {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border: 3px solid green;
+    border-radius: 10px;
+    text-shadow: 0 0 .5px black;
+}
+.holidTitle {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px 5px 0px 5px;
+}
+.ulHolidays {
+    font-size: 15px;
+    list-style-type: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.listHolidays {
+    padding: 2px 5px 2px 5px;
+    margin: 5px 5px 5px 5px;
+}
+.holidays {
+    color: rgb(165, 0, 0);
 }
