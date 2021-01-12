@@ -28,15 +28,24 @@ function checkYear(holidays) {
     }
 }
 
+function getDateDay(date) {
+    if (date.getDay() === 0) {
+        return 7;
+    }
+    return date.getDay();
+}
+
 function checkWeekend(date) {
-    return (date.getDay() === 6 || date.getDay() === 0);
+    //return (date.getDay() === 6 || date.getDay() === 0);
+    return (getDateDay(date) === 6 || getDateDay(date) === 7);
 }
 
 // Кол-во праздничных выходных в году, за исключением субботы и воскресенья
 function countHollidaysInYear(holidays) {
     let count = 0;
-    for (let i = 0; i < holidays.length - 1; i++) {
-        if (checkWeekend(holidays[i])) {
+    for (let i = 0; i < holidays.length; i++) {
+        if (!checkWeekend(holidays[i])) {
+            debugger;
             count++;
         }
     }
@@ -75,12 +84,12 @@ function getHolidays() {
 function backLight(holidays) {
     let holidaysHtml = document.querySelectorAll('.listHolidays');
     let clearBackground = function() {
-        for (let i = 0; i < holidays.length - 1; i++) {
+        for (let i = 0; i < holidays.length; i++) {
             holidaysHtml[i].style.backgroundColor = 'white';
         }
     }();
-    for (let i = 0; i < holidays.length - 1; i++) {
-        if (checkWeekend(holidays[i])) {
+    for (let i = 0; i < holidays.length; i++) {
+        if (!checkWeekend(holidays[i])) {
             holidaysHtml[i].style.backgroundColor = 'green';
         }
     }
