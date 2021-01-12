@@ -29,14 +29,14 @@ function checkYear(holidays) {
 }
 
 function checkWeekend(date) {
-    return (date.getDay() === 6 || date.getDay() === 7);
+    return (date.getDay() === 6 || date.getDay() === 0);
 }
 
 // Кол-во праздничных выходных в году, за исключением субботы и воскресенья
 function countHollidaysInYear(holidays) {
     let count = 0;
     for (let i = 0; i < holidays.length - 1; i++) {
-        if (!checkWeekend(holidays[i])) {
+        if (checkWeekend(holidays[i])) {
             count++;
         }
     }
@@ -80,7 +80,7 @@ function backLight(holidays) {
         }
     }();
     for (let i = 0; i < holidays.length - 1; i++) {
-        if (!checkWeekend(holidays[i])) {
+        if (checkWeekend(holidays[i])) {
             holidaysHtml[i].style.backgroundColor = 'green';
         }
     }
