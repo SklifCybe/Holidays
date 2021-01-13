@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Holidays</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <div id="container">
         <div id="title">Введите дату</div>
@@ -13,20 +19,19 @@
         <input type="button" value="Проверить" id="btnSubmit">
     </div>
     <div id="govHolidays">
-        <span class="holidTitle">Государственнные праздники в буднии дни</span>
+        <span class="holidTitle">Красные дни календаря в буднии дни</span>
         <ul class="ulHolidays">
             <li class="listHolidays">1 января. <span class="holidays">"Новый год"</span></li>
             <li class="listHolidays">7 января. <span class="holidays">"Православное рождество"</span></li>
             <li class="listHolidays">8 марта. <span class="holidays">"День женщин"</span></li>
-            <li class="listHolidays">4 апреля. <span class="holidays">"Католическая пасха"</span></li>
             <li class="listHolidays">1 мая. <span class="holidays">"Праздник труда"</span></li>
-            <li class="listHolidays">2 мая. <span class="holidays">"Православная пасха"</span></li>
             <li class="listHolidays">9 мая. <span class="holidays">"День победы"</span></li>
-            <li class="listHolidays">11 мая. <span class="holidays">"Радуница"</span></li>
+            <li class="listHolidays"><span id="radonitsa">11 мая.</span><span class="holidays">"Радуница"</span></li>
             <li class="listHolidays">3 июля. <span class="holidays">"День независимости РБ"</span></li>
             <li class="listHolidays">7 ноября. <span class="holidays">"День октябрьской революции"</span></li>
             <li class="listHolidays">25 декабяр. <span class="holidays">"Католическое рождество"</span></li>
         </ul>
     </div>
 </body>
+
 </html>
